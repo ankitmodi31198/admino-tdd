@@ -9,6 +9,8 @@ export class StringCalculatorFunctionalService {
     let sum: number = 0;
 
     if (stringToBeAdd) {
+      stringToBeAdd = (<any>stringToBeAdd).replaceAll('\\n', ',');
+      // const numbers = stringToBeAdd.split(/[\n,]/);
       const numbers = stringToBeAdd.split(',');
       if (numbers?.length) {
         for (let i = 0; i < numbers.length; i++) {

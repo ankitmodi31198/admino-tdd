@@ -43,4 +43,9 @@ describe('StringCalculatorFunctionalService', () => {
     expect(service.add('1,2,3')).toBe(6);
   });
 
+  it('should return correct sum for numbers with new lines between them', () => {
+    const result = service.add('1\n2,3');
+    expect(result).toBe(6);
+  });
+
 });
