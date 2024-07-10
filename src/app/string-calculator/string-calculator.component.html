@@ -1,0 +1,15 @@
+<div class="string-calculator-container">
+    <section class="string-calculator-form-container">
+        <div class="string-calculator-field-container">
+            <label>Enter String to Calculate Sum: </label>
+            <input type="text" [(ngModel)]="stringToBeCalculateSum"
+                (ngModelChange)="stringToBeCalculateSumChangeHandler($event)">
+        </div>
+
+        <div class="string-calculator-sum-container">
+            <span *ngIf="(calculatedSum !== null) && (calculatedSum !== undefined)" class="string-calculator-sum">
+                Your sum is: {{calculatedSum}}
+            </span>
+        </div>
+    </section>
+</div>
