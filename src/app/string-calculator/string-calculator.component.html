@@ -2,8 +2,11 @@
     <section class="string-calculator-form-container">
         <div class="string-calculator-field-container">
             <label>Enter String to Calculate Sum: </label>
-            <input type="text" [(ngModel)]="stringToBeCalculateSum"
-                (ngModelChange)="stringToBeCalculateSumChangeHandler($event)">
+            <input type="text" [(ngModel)]="stringToBeCalculateSum">
+        </div>
+
+        <div class="string-calculator-calculate-button-container">
+            <button type="button" (click)="stringToBeCalculateSumChangeHandler()">Calculate</button>
         </div>
 
         <div class="string-calculator-sum-container">

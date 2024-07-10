@@ -16,8 +16,8 @@ export class StringCalculatorComponent {
     private functionalService: StringCalculatorFunctionalService
   ) { }
 
-  stringToBeCalculateSumChangeHandler(stringToBeCalculateSum: string) {
-    this.calculatedSum = this.functionalService.add(stringToBeCalculateSum);
+  stringToBeCalculateSumChangeHandler() {
+    this.calculatedSum = this.functionalService.add(this.stringToBeCalculateSum);
   }
 
 }
